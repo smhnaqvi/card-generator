@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="main.css" type="text/css" rel="stylesheet">
+    <title>card generator</title>
+</head>
+<body>
+<div class="container">
+    <div id="config">
+        <div class="input-group">
+            <span>background cover:</span>
+            <input type="file" id="backgroundCover">
+        </div>
+        <hr style="width: 90%;height: 1px">
+
+        <div class="input-group">
+            <span>width:</span>
+            <input type="range" id="widthSize" value="13" min="8" max="15"> px
+            <span style="margin-left: 15px">height:</span>
+            <input type="range" id="heightSize" value="8" min="4" max="10"> px
+        </div>
+
+        <hr style="width: 90%;height: 1px">
+        <div class="options">
+            <div class="input-group">
+                <span>font size:</span>
+                <input type="range" id="fontSize" value="15" min="10" max="18"> px
+            </div>
+            <div class="input-group">
+                <span>text color:</span>
+                <input type="color" id="textColor">
+            </div>
+        </div>
+        <hr style="width: 90%;height: 1px">
+        <div id="inputManageArea"></div>
+        <button onclick="addItem({id:null,top:0,left:0,key:'key item',value:'value item'})">add new item</button>
+    </div>
+    <div>
+        <div id="displayWidth">width:</div>
+        <div id="displayHeight">height:</div>
+        <div id="parent"></div>
+        <div id="itemPosition"></div>
+    </div>
+</div>
+<div id="displayCards">
+</div>
+</body>
+<script src="main.js"></script>
+</html>
